@@ -135,7 +135,7 @@ function Dashboard(currentData, forecastData) {
       <div class="mt-4 p-4 bg-[#232323] rounded flex flex-row justify-center items-center">
         <div class="font-bold text-[4rem] text-[#E1E1E1]">${currentData.temp}</div>
         <div class="p-1 mb-6 font-bold text-[1.5rem] text-[#E1E1E1]">°C</div>
-        <div class="ml-6 flex flex-col">
+        <div class="ml-6 max-sm:ml-4 flex flex-col">
           <div class="font-medium text-[1rem] text-[#E1E1E1]">${currentData.conditions}</div>
           <div class="font-medium text-[0.75rem] text-[#AFAFAF]">Feels like ${currentData.feelslike}°C</div>
         </div>
