@@ -36,7 +36,7 @@ export default function WeatherForecastCard({
   forecastCard.classList.add("bg-[#1E1E1E]");
   forecastCard.classList.add("hover:-translate-y-0.5");
   forecastCard.classList.add("hover:drop-shadow");
-  forecastCard.classList.add("hover:bg-[#282828]");
+  forecastCard.classList.add("hover:bg-[#242424]");
   forecastCard.classList.add("transition-all");
   forecastCard.innerHTML = /*html*/ `
     <div class="flex flex-row items-center flex-1">

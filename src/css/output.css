@@ -499,6 +499,13 @@
       }
     }
   }
+  .hover\:bg-\[\#242424\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #242424;
+      }
+    }
+  }
   .hover\:bg-\[\#282828\] {
     &:hover {
       @media (hover: hover) {
