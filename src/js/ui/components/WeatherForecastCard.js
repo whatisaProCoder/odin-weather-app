@@ -50,11 +50,11 @@ export default function WeatherForecastCard({
       : "Tomorrow"
     }</div>
     <div class="flex flex-row items-center justify-end flex-1 max-sm:hidden">
-      <div class="font-bold text-[0.8rem] w-[6ch] text-[#ffffff] text-center">${tempmin}°C</div>
+      <div class="font-bold text-[0.8rem] w-[6ch] text-[#e1e1e1] text-center">${tempmin}°C</div>
         <div class="ml-3 mb-0.5 rounded-full h-2.25 w-24 bg-[#919191] overflow-hidden">
-          <div class="h-full bg-[#ffffff]" style="width: ${tempWidth}%"></div>
+          <div class="h-full bg-[#e1e1e1]" style="width: ${tempWidth}%"></div>
         </div>
-      <div class="ml-3 font-bold text-[0.8rem] w-[6ch] text-[#ffffff] text-center">${tempmax}°C</div>
+      <div class="ml-3 font-bold text-[0.8rem] w-[6ch] text-[#e1e1e1] text-center">${tempmax}°C</div>
     </div>
   `;
 

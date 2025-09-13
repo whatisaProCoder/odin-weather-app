@@ -344,6 +344,9 @@
   .bg-\[\#919191\] {
     background-color: #919191;
   }
+  .bg-\[\#e1e1e1\] {
+    background-color: #e1e1e1;
+  }
   .bg-\[\#ffffff\] {
     background-color: #ffffff;
   }
@@ -547,11 +550,6 @@
   .max-sm\:text-\[1\.25rem\] {
     @media (width < 40rem) {
       font-size: 1.25rem;
-    }
-  }
-  .max-sm\:text-\[1rem\] {
-    @media (width < 40rem) {
-      font-size: 1rem;
     }
   }
   .sm\:mt-12 {
