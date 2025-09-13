@@ -1,36 +1,52 @@
+import clearDayIcon from "../../../icons/clear-day.svg";
+import clearNightIcon from "../../../icons/clear-night.svg";
+import cloudyIcon from "../../../icons/cloudy.svg";
+import fogIcon from "../../../icons/fog.svg";
+import hailIcon from "../../../icons/hail.svg";
+import partlyCloudyDayIcon from "../../../icons/partly-cloudy-day.svg";
+import partlyCloudyNightIcon from "../../../icons/partly-cloudy-night.svg";
+import rainSnowShowersDayIcon from "../../../icons/rain-snow-showers-day.svg";
+import rainSnowShowersNightIcon from "../../../icons/rain-snow-showers-day.svg";
+import rainSnowIcon from "../../../icons/rain-snow.svg";
+import rainIcon from "../../../icons/rain.svg";
+import showersDayIcon from "../../../icons/showers-day.svg";
+import showersNightIcon from "../../../icons/showers-night.svg";
+import sleetIcon from "../../../icons/sleet.svg";
+import snowShowersDayIcon from "../../../icons/snow-showers-day.svg";
+import snowShowersNightIcon from "../../../icons/snow-showers-night.svg";
+import snowIcon from "../../../icons/snow.svg";
+import thunderRainIcon from "../../../icons/thunder-rain.svg";
+import thunderShowersDayIcon from "../../../icons/thunder-showers-day.svg";
+import thunderShowersNightIcon from "../../../icons/thunder-showers-night.svg";
+import thunderIcon from "../../../icons/thunder.svg";
+import windIcon from "../../../icons/wind.svg";
+
 export default function DynamicIconSet() {
-  // This ensures webpack includes all SVG files in the bundle
-  const requireIcon = require.context('../../../icons', false, /\.svg$/);
-
   const dynamicIconSet = {
-    "clear-day": requireIcon('./clear-day.svg'),
-    "clear-night": requireIcon('./clear-night.svg'),
-    "cloudy": requireIcon('./cloudy.svg'),
-    "fog": requireIcon('./fog.svg'),
-    "hail": requireIcon('./hail.svg'),
-    "partly-cloudy-day": requireIcon('./partly-cloudy-day.svg'),
-    "partly-cloudy-night": requireIcon('./partly-cloudy-night.svg'),
-    "rain-snow-showers-day": requireIcon('./rain-snow-showers-day.svg'),
-    "rain-snow-showers-night": requireIcon('./rain-snow-showers-day.svg'),
-    "rain-snow": requireIcon('./rain-snow.svg'),
-    "rain": requireIcon('./rain.svg'),
-    "showers-day": requireIcon('./showers-day.svg'),
-    "showers-night": requireIcon('./showers-night.svg'),
-    "sleet": requireIcon('./sleet.svg'),
-    "snow-showers-day": requireIcon('./snow-showers-day.svg'),
-    "snow-showers-night": requireIcon('./snow-showers-night.svg'),
-    "snow": requireIcon('./snow.svg'),
-    "thunder-rain": requireIcon('./thunder-rain.svg'),
-    "thunder-showers-day": requireIcon('./thunder-showers-day.svg'),
-    "thunder-showers-night": requireIcon('./thunder-showers-night.svg'),
-    "thunder": requireIcon('./thunder.svg'),
-    "wind": requireIcon('./wind.svg'),
-    "null": requireIcon('./clear-day.svg'),
+    "clear-day": clearDayIcon,
+    "clear-night": clearNightIcon,
+    "cloudy": cloudyIcon,
+    "fog": fogIcon,
+    "hail": hailIcon,
+    "partly-cloudy-day": partlyCloudyDayIcon,
+    "partly-cloudy-night": partlyCloudyNightIcon,
+    "rain-snow-showers-day": rainSnowShowersDayIcon,
+    "rain-snow-showers-night": rainSnowShowersNightIcon,
+    "rain-snow": rainSnowIcon,
+    "rain": rainIcon,
+    "showers-day": showersDayIcon,
+    "showers-night": showersNightIcon,
+    "sleet": sleetIcon,
+    "snow-showers-day": snowShowersDayIcon,
+    "snow-showers-night": snowShowersNightIcon,
+    "snow": snowIcon,
+    "thunder-rain": thunderRainIcon,
+    "thunder-showers-day": thunderShowersDayIcon,
+    "thunder-showers-night": thunderShowersNightIcon,
+    "thunder": thunderIcon,
+    "wind": windIcon,
+    "null": clearDayIcon,
   };
 
-  const getIcons = () => {
-    return dynamicIconSet;
-  };
-
-  return { getIcons };
+  return dynamicIconSet;
 }

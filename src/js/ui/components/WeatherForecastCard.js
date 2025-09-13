@@ -9,9 +9,9 @@ export default function WeatherForecastCard({
   conditions,
   iconname,
 }) {
-  const metricCard = document.createElement("div");
+  const forecastCard = document.createElement("div");
 
-  const dynamicIconSet = DynamicIconSet().getIcons();
+  const dynamicIconSet = DynamicIconSet();
 
   conditions = conditions.split(",");
 
@@ -26,29 +26,28 @@ export default function WeatherForecastCard({
 
   const tempWidth = Math.round(((temp - tempmin) / (tempmax - tempmin)) * 100);
 
-  metricCard.classList.add("border-1");
-  metricCard.classList.add("border-[#282828]");
-  metricCard.classList.add("flex");
-  metricCard.classList.add("flex-row");
-  metricCard.classList.add("items-center");
-  metricCard.classList.add("p-3");
-  metricCard.classList.add("rounded");
-  metricCard.classList.add("bg-[#1E1E1E]");
-  metricCard.classList.add("hover:-translate-y-0.5");
-  metricCard.classList.add("hover:drop-shadow");
-  metricCard.classList.add("hover:bg-[#282828]");
-  metricCard.classList.add("transition-all");
-  metricCard.innerHTML = /*html*/ `
+  forecastCard.classList.add("border-1");
+  forecastCard.classList.add("border-[#282828]");
+  forecastCard.classList.add("flex");
+  forecastCard.classList.add("flex-row");
+  forecastCard.classList.add("items-center");
+  forecastCard.classList.add("p-3");
+  forecastCard.classList.add("rounded");
+  forecastCard.classList.add("bg-[#1E1E1E]");
+  forecastCard.classList.add("hover:-translate-y-0.5");
+  forecastCard.classList.add("hover:drop-shadow");
+  forecastCard.classList.add("hover:bg-[#282828]");
+  forecastCard.classList.add("transition-all");
+  forecastCard.innerHTML = /*html*/ `
     <div class="flex flex-row items-center flex-1">
       <div class="h-12 w-13 bg-[#2d89da] p-2 rounded">
-        <img class="h-full w-14" src=${dynamicIconSet[iconname]}/>
+        <img class="h-full w-14" id="weather-icon" />
       </div>
       <div class="ml-3.5 text-[0.875rem] text-[#e1e1e1] font-normal leading-5">${conditionsElement}</div>
     </div>
-    <div class="text-[#979797] font-medium text-[0.95rem]">${
-      parsedDate.getDate() - new Date().getDate() != 1
-        ? format(parsedDate, "dd/MM/yy")
-        : "Tomorrow"
+    <div class="text-[#979797] font-medium text-[0.95rem]">${parsedDate.getDate() - new Date().getDate() != 1
+      ? format(parsedDate, "dd/MM/yy")
+      : "Tomorrow"
     }</div>
     <div class="flex flex-row items-center justify-end flex-1 max-sm:hidden">
       <div class="font-bold text-[0.8rem] w-[6ch] text-[#ffffff] text-center">${tempmin}°C</div>
@@ -59,5 +58,8 @@ export default function WeatherForecastCard({
     </div>
   `;
 
-  return metricCard;
+  const weatherIcon = forecastCard.querySelector("#weather-icon");
+  weatherIcon.src = dynamicIconSet[iconname];
+
+  return forecastCard;
 }

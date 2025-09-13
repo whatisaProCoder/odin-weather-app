@@ -21,7 +21,7 @@ import cloudcoverIcon from "../../../icons/cloudcover-icon.svg";
 import DynamicIconSet from "../modules/DynamicIconSet";
 import GeolocationAPI from "../../core/APIs/GeolocationAPI";
 
-const dynamicIconSet = DynamicIconSet().getIcons();
+const dynamicIconSet = DynamicIconSet();
 
 export default function MainPage() {
   const content = document.querySelector(".content");
@@ -108,7 +108,7 @@ function Dashboard(currentData, forecastData) {
           </div>
         </div>
         <div class="h-full aspect-square bg-[#2d89da] p-2 rounded">
-          <img class="h-full w-14" src=${dynamicIconSet[currentData.iconname]}/>
+          <img class="h-full w-14" id="current-weather-icon"/>
         </div>
       </div>
       <div class="mt-4 p-4 bg-[#232323] rounded flex flex-row justify-center items-center">
@@ -129,6 +129,9 @@ function Dashboard(currentData, forecastData) {
     <div id="forcasts" class="flex flex-col gap-3"></div>
     <div class="mt-12 mb-4 text-center text-[0.875rem] text-[#AFAFAF] font-medium">Built by <a class="outline-none text-[#50adff] hover:text-[#82c5ff]" href="https://www.github.com/whatisaProCoder">@whatisaProCoder</a></div>
   `;
+
+  const currentWeatherIcon = dashboardElement.querySelector("#current-weather-icon");
+  currentWeatherIcon.src = dynamicIconSet[currentData.iconname];
 
   const metrics = [
     {
