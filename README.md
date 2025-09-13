@@ -115,56 +115,11 @@ src/
    npm run build
    ```
 
-### Development Scripts
-
-- `npm run dev`: Start the development server with hot reloading
-- `npm run build`: Build the project for production
-- `npm run tailwind-cli:watch`: Watch for CSS changes and compile Tailwind CSS
-- `npm run deploy:upload`: Deploy the app to GitHub Pages
-
-## API Keys
-
-The project uses the following API key:
-
-- Visual Crossing Weather API: `CH7MUQRZ58S76FYJBJNPY87VQ`
-
-**Note**: This API key is included for demonstration purposes. In a real-world application, you should store API keys securely using environment variables.
-
-## Customization
-
-### Adding New Weather Metrics
-
-To add a new weather metric:
-
-1. Update the `DataExtractor.js` to include the new data point
-2. Add the metric to the `metrics` array in `MainPage.js`
-3. Create an icon for the metric in the `icons` folder if needed
-
-### Changing the Theme
-
-The app uses Tailwind CSS for styling with custom color classes. To change the theme:
-
-1. Modify the color values in the inline classes or update the `tailwind.config.cjs` file
-2. Run `npm run tailwind-cli:watch` to compile the changes
-
-## Browser Compatibility
-
-This app has been tested and works well in:
-
-- Chrome (latest)
-- Firefox (latest)
-- Edge (latest)
-- Safari (latest)
-
-## Contributing
-
-Contributions are welcome! Feel free to submit issues or pull requests.
-
 ## Acknowledgements
 
 - Weather data provided by [Visual Crossing](https://www.visualcrossing.com/)
+- Icons adapted from Visual Crossing's [WeatherIcons](https://github.com/visualcrossing/WeatherIcons)
 - Project created as part of [The Odin Project](https://www.theodinproject.com/) curriculum
-- Icons adapted from various open-source icon sets
 
 ## License
 
