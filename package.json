@@ -1,7 +1,7 @@
 {
   "name": "Weather App",
   "version": "0.0.1",
-  "description": "A simple weather app using Visual Crossing & GIPHY API.",
+  "description": "A simple weather app using Visual Crossing & Browser Geolocation API.",
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.prod.js",
