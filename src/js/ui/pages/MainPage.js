@@ -35,7 +35,7 @@ export default function MainPage() {
     </div>
     <div id="dashboard">
     </div>
-    <div id="loading-text" class="hidden mt-56 text-center text-[#8a8a8a] text-[1.5rem]">Loading...</div>
+    <div id="loading-text" class="hidden mt-56 text-center text-[#8a8a8a] text-[1.5rem] max-sm:text-[1.25rem]">Loading...</div>
   `;
 
   const searchButton = content.querySelector("#search-button");

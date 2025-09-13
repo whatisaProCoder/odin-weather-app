@@ -544,6 +544,16 @@
       padding-bottom: calc(var(--spacing) * 8);
     }
   }
+  .max-sm\:text-\[1\.25rem\] {
+    @media (width < 40rem) {
+      font-size: 1.25rem;
+    }
+  }
+  .max-sm\:text-\[1rem\] {
+    @media (width < 40rem) {
+      font-size: 1rem;
+    }
+  }
   .sm\:mt-12 {
     @media (width >= 40rem) {
       margin-top: calc(var(--spacing) * 12);
