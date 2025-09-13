@@ -1,0 +1,39 @@
+{
+  "name": "Weather App",
+  "version": "0.0.1",
+  "description": "A simple weather app using Visual Crossing & GIPHY API.",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.prod.js",
+    "dev": "webpack serve --config webpack.dev.js",
+    "git-hooks:init": "npx simple-git-hooks",
+    "deploy:make-branch": "git branch gh-pages",
+    "deploy:delete-branch": "git branch -D gh-pages && git push origin --delete gh-pages",
+    "deploy:sync-branch": "git status && git add . && git commit -m \"final deployment\" && git checkout gh-pages && git merge main --no-edit",
+    "deploy:build-web": "npm run build",
+    "deploy:commit": "git add dist -f && git commit -m \"Deployment commit\"",
+    "deploy:upload": " git subtree push --prefix dist origin gh-pages && git checkout main",
+    "tailwind-cli:watch": "tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch"
+  },
+  "keywords": [],
+  "author": "Pritam Debnath",
+  "license": "ISC",
+  "dependencies": {
+    "date-fns": "^4.1.0",
+    "pretty-print-json": "^3.0.5",
+    "smooth-scrollbar": "^8.8.4",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "css-loader": "^7.1.2",
+    "globals": "^16.3.0",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.3",
+    "style-loader": "^4.0.0",
+    "tailwindcss": "^4.1.12",
+    "@tailwindcss/cli": "^4.1.12",
+    "webpack-dev-server": "^5.2.2"
+  }
+}
