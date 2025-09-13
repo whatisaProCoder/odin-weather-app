@@ -3,7 +3,7 @@ export default function DataExtractor() {
     const relevantData = {
       latitude: data.latitude,
       longitude: data.longitude,
-      address: data.address,
+      address: data.resolvedAddress,
       timezone: data.timezone,
       datetime: data.days[0].datetime,
       temp: data.currentConditions.temp,

@@ -57,6 +57,23 @@ export default function MainPage() {
     }
   });
 
+  document.addEventListener("keydown", (e) => {
+    if (e.key === 'Enter') {
+      const location = searchField.value;
+      if (location != "") {
+        showLoader();
+        WeatherAPI()
+          .getData(location)
+          .then((data) => {
+            const currentData = DataExtractor().parseCurrentWeatherData(data);
+            const forecastData = DataExtractor().parseForecastData(data);
+            Dashboard(currentData, forecastData);
+            hideLoader();
+          });
+      }
+    }
+  });
+
   init();
 }
 
