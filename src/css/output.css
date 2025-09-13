@@ -365,6 +365,9 @@
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
   }
+  .pb-4 {
+    padding-bottom: calc(var(--spacing) * 4);
+  }
   .pl-5 {
     padding-left: calc(var(--spacing) * 5);
   }
@@ -521,19 +524,9 @@
       background-color: #1B5D96;
     }
   }
-  .max-sm\:ml-2 {
-    @media (width < 40rem) {
-      margin-left: calc(var(--spacing) * 2);
-    }
-  }
   .max-sm\:ml-3 {
     @media (width < 40rem) {
       margin-left: calc(var(--spacing) * 3);
-    }
-  }
-  .max-sm\:ml-4 {
-    @media (width < 40rem) {
-      margin-left: calc(var(--spacing) * 4);
     }
   }
   .max-sm\:hidden {
@@ -544,6 +537,11 @@
   .max-sm\:items-center {
     @media (width < 40rem) {
       align-items: center;
+    }
+  }
+  .max-sm\:pb-8 {
+    @media (width < 40rem) {
+      padding-bottom: calc(var(--spacing) * 8);
     }
   }
   .sm\:mt-12 {
@@ -639,26 +637,6 @@ body {
     margin-left: 2.5rem;
     margin-right: 2.5rem;
     width: 60%;
-  }
-}
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-    display: none;
-  }
-  100% {
-    opacity: 1;
-    display: block;
-  }
-}
-@keyframes fade-out {
-  0% {
-    opacity: 1;
-    display: block;
-  }
-  100% {
-    opacity: 0;
-    display: none;
   }
 }
 @property --tw-border-style {

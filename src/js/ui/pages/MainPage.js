@@ -148,7 +148,7 @@ function Dashboard(currentData, forecastData) {
     </div>
     <div class="mt-12 mb-4 font-bold text-[1.125rem] text-[#B9B9B9]">Weekly Forecast</div>
     <div id="forcasts" class="flex flex-col gap-3"></div>
-    <div class="mt-12 mb-4 text-center text-[0.875rem] text-[#AFAFAF] font-medium">Built by <a class="outline-none text-[#50adff] hover:text-[#82c5ff]" href="https://www.github.com/whatisaProCoder">@whatisaProCoder</a></div>
+    <div class="mt-12 pb-4 max-sm:pb-8 text-center text-[0.875rem] text-[#AFAFAF] font-medium">Built by <a class="outline-none text-[#50adff] hover:text-[#82c5ff]" href="https://www.github.com/whatisaProCoder" target="_blank">@whatisaProCoder</a></div>
   `;
 
   const currentWeatherIcon = dashboardElement.querySelector("#current-weather-icon");
@@ -191,7 +191,7 @@ function Dashboard(currentData, forecastData) {
       iconSrc: windspeedIcon,
     },
     {
-      name: `Direction (${currentData.winddir}°)`,
+      name: `Direction`,
       value: `${DirectionParser(currentData.winddir)}`,
       iconSrc: winddirectionIcon,
     },
