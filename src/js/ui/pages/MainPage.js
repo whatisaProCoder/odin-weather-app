@@ -53,6 +53,9 @@ export default function MainPage() {
           const forecastData = DataExtractor().parseForecastData(data);
           Dashboard(currentData, forecastData);
           hideLoader();
+        }).catch(error => {
+          alert(error);
+          hideLoader();
         });
     }
   });
@@ -69,6 +72,9 @@ export default function MainPage() {
             const currentData = DataExtractor().parseCurrentWeatherData(data);
             const forecastData = DataExtractor().parseForecastData(data);
             Dashboard(currentData, forecastData);
+            hideLoader();
+          }).catch(error => {
+            alert(error);
             hideLoader();
           });
       }
@@ -94,6 +100,9 @@ function init() {
 
           Dashboard(currentData, forecastData);
 
+          hideLoader();
+        }).catch(error => {
+          alert(error);
           hideLoader();
         });
     }).catch(error => {
