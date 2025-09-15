@@ -61,6 +61,7 @@ export default function MainPage() {
     if (e.key === 'Enter') {
       const location = searchField.value;
       if (location != "") {
+        clearDashboard();
         showLoader();
         WeatherAPI()
           .getData(location)
