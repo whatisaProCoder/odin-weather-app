@@ -186,6 +186,9 @@
   .mt-56 {
     margin-top: calc(var(--spacing) * 56);
   }
+  .mr-4 {
+    margin-right: calc(var(--spacing) * 4);
+  }
   .mb-0 {
     margin-bottom: calc(var(--spacing) * 0);
   }

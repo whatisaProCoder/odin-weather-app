@@ -132,7 +132,7 @@ function Dashboard(currentData, forecastData) {
   dashboardElement.innerHTML = /* html */ `
     <div class="mt-12 sm:mt-16 p-4 flex flex-col border-1 border-[#282828] bg-[#1E1E1E] rounded">
       <div class="flex flex-row">
-        <div class="ml-1 flex flex-col flex-1">
+        <div class="ml-1 flex flex-col flex-1 mr-4">
           <div class="font-bold text-[#E1E1E1] text-[1.25rem]">${currentData.address}</div>
           <div class="mt-2 font-semibold text-[#E1E1E1] text-[1rem]">
             ${format(parse(currentData.datetime, "yyyy-MM-dd", new Date()), "EEEE, do MMM")}
