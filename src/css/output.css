@@ -347,9 +347,6 @@
   .bg-\[\#e1e1e1\] {
     background-color: #e1e1e1;
   }
-  .bg-\[\#ffffff\] {
-    background-color: #ffffff;
-  }
   .p-1 {
     padding: calc(var(--spacing) * 1);
   }
@@ -451,9 +448,6 @@
   }
   .text-\[\#e1e1e1\] {
     color: #e1e1e1;
-  }
-  .text-\[\#ffffff\] {
-    color: #ffffff;
   }
   .underline {
     text-decoration-line: underline;
@@ -582,6 +576,11 @@
   .sm\:justify-start {
     @media (width >= 40rem) {
       justify-content: flex-start;
+    }
+  }
+  .sm\:px-6 {
+    @media (width >= 40rem) {
+      padding-inline: calc(var(--spacing) * 6);
     }
   }
   .sm\:py-5 {

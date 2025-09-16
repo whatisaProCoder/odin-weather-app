@@ -201,7 +201,7 @@ function Dashboard(currentData, forecastData) {
       iconSrc: windspeedIcon,
     },
     {
-      name: `Direction`,
+      name: `Direction (${currentData.winddir}°)`,
       value: `${DirectionParser(currentData.winddir)}`,
       iconSrc: winddirectionIcon,
     },

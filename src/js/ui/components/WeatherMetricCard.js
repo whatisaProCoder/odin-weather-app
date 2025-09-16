@@ -8,7 +8,7 @@ export default function WeatherMetricCard({ name, value, iconSrc }) {
   metricCard.classList.add("items-center");
   metricCard.classList.add("py-4");
   metricCard.classList.add("sm:py-5");
-  metricCard.classList.add("px-6");
+  metricCard.classList.add("sm:px-6");
   metricCard.classList.add("rounded");
   metricCard.classList.add("bg-[#232323]");
   metricCard.classList.add("hover:-translate-y-0.5");
