@@ -2,6 +2,7 @@ import DynamicIconSet from "../modules/DynamicIconSet";
 import { parse, format } from "date-fns";
 
 export default function WeatherForecastCard({
+  current_datetime,
   datetime,
   tempmax,
   tempmin,
@@ -23,6 +24,7 @@ export default function WeatherForecastCard({
   }
 
   const parsedDate = parse(datetime, "yyyy-MM-dd", new Date());
+  const parsedCurrentDate = parse(current_datetime, "yyyy-MM-dd", new Date());
 
   const tempWidth = Math.round(((temp - tempmin) / (tempmax - tempmin)) * 100);
 
@@ -45,7 +47,7 @@ export default function WeatherForecastCard({
       </div>
       <div class="ml-3.5 text-[0.875rem] text-[#e1e1e1] font-normal leading-5">${conditionsElement}</div>
     </div>
-    <div class="text-[#979797] font-medium text-[0.95rem]">${parsedDate.getDate() - new Date().getDate() != 1
+    <div class="text-[#979797] font-medium text-[0.95rem]">${parsedDate.getDate() - parsedCurrentDate.getDate() != 1
       ? format(parsedDate, "dd/MM/yy")
       : "Tomorrow"
     }</div>
