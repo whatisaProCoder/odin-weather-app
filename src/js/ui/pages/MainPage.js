@@ -234,6 +234,7 @@ function Dashboard(currentData, forecastData) {
 
   for (const forecast of forecastData.days) {
     const forecastCard = WeatherForecastCard({
+      current_datetime: currentData.datetime,
       datetime: forecast.datetime,
       tempmax: forecast.tempmax,
       tempmin: forecast.tempmin,
